@@ -99,7 +99,7 @@ function createMoney() {
   scene.add(money)
   particles.push(money)
 }
-setInterval(createMoney, 100)
+setInterval(createMoney, 0)
 
 function animateParticles() {
   particles.forEach((money) => {
