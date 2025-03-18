@@ -3,7 +3,7 @@ const loader = new THREE.TextureLoader()
 
 // Создаем сферу для фона
 const backgroundGeometry = new THREE.SphereGeometry(50, 32, 32)
-const backgroundTexture = loader.load('/hrush.webp')
+const backgroundTexture = loader.load('./hrush.webp')
 backgroundTexture.mapping = THREE.EquirectangularReflectionMapping
 const backgroundMaterial = new THREE.MeshBasicMaterial({
   map: backgroundTexture,
@@ -39,7 +39,7 @@ light.position.set(-1, 3, 5)
 light.castShadow = true
 scene.add(light)
 
-const moneyTexture = loader.load('/money.png', (texture) => {
+const moneyTexture = loader.load('./money.png', (texture) => {
   texture.wrapS = THREE.RepeatWrapping
   texture.wrapT = THREE.RepeatWrapping
   texture.repeat.set(8, 8)
@@ -66,7 +66,7 @@ let baseRotationX = 0.5
 let baseRotationZ = 0.3
 pyramid.rotation.set(baseRotationX, 0, baseRotationZ)
 
-const moneyTextures = ['/money1.png', '/money2.png', '/money3.png']
+const moneyTextures = ['./money1.png', './money2.png', './money3.png']
 const particles = []
 
 function createMoney() {
